@@ -1,0 +1,1 @@
+Simple web app made with use of Artifical Inteligence
