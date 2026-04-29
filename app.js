@@ -21,7 +21,7 @@ function createItemElement(item) {
     category.textContent = item.category;
     price.textContent = `${item.price} zl`;
     description.textContent = item.description;
-    button.textContent = "Pokaz szczegoly";
+    button.textContent = "Show details";
     button.href = `product_page.html?id=${item.id}`;
 
     card.appendChild(title);

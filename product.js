@@ -26,7 +26,7 @@ function createProductDetail(product) {
     price.textContent = `${product.price} zl`;
     description.textContent = product.details;
     backLink.href = "main_page.html";
-    backLink.textContent = "Wroc do listy produktow";
+    backLink.textContent = "Back to products list";
 
     copy.appendChild(category);
     copy.appendChild(title);
@@ -47,10 +47,10 @@ function renderProductDetail() {
         productDetailContainer.innerHTML = `
             <section class="hero">
                 <p class="hero-badge">Blad</p>
-                <h2>Nie znalezlismy produktu</h2>
-                <p class="hero-text">Sprawdz link albo wroc na strone glowna i wybierz produkt ponownie.</p>
+                <h2>Haven't found a product</h2>
+                <p class="hero-text">Go back to main page</p>
             </section>
-        `;
+            `;
         return;
     }
 
