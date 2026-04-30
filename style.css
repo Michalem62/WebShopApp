@@ -425,16 +425,15 @@ body {
     }
 
     .sidebar {
-        width: 25%;
+        width: 15%;
         height: calc(100vh - 120px);
         min-height: auto;
         border-right: 2px solid rgba(17, 17, 17, 0.12);
-        border-bottom: 2px solid rgba(17, 17, 17, 0.12);
         box-shadow: 10px 0 24px rgba(17, 17, 17, 0.05);
     }
 
     .content {
-        width: 75%;
+        width: 85%;
     }
 
     .hero {

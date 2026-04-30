@@ -10,13 +10,11 @@ function createProductDetail(product) {
     const title = document.createElement("h2");
     const price = document.createElement("p");
     const description = document.createElement("p");
-    const backLink = document.createElement("a");
 
     wrapper.classList.add("product-detail");
     image.classList.add("product-detail-image");
     copy.classList.add("product-detail-copy");
     price.classList.add("product-price");
-    backLink.classList.add("item-button");
 
     image.src = product.photo;
     image.alt = product.name;
@@ -24,15 +22,12 @@ function createProductDetail(product) {
     category.classList.add("section-label");
     title.textContent = product.name;
     price.textContent = `${product.price} zl`;
-    description.textContent = product.details;
-    backLink.href = "main_page.html";
-    backLink.textContent = "Back to products list";
+    description.textContent = product.description;
 
     copy.appendChild(category);
     copy.appendChild(title);
     copy.appendChild(price);
     copy.appendChild(description);
-    copy.appendChild(backLink);
 
     wrapper.appendChild(image);
     wrapper.appendChild(copy);
