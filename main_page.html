@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="site-header">
-        <div>
+        <div class="brand-block">
             <p class="eyebrow">Web shop</p>
             <h1>ShopWebApp</h1>
         </div>
@@ -23,21 +23,57 @@
         </aside>
         <section class="content">
             <section class="hero">
-                <p class="hero-badge">New collection</p>
-                <h2>Products</h2>
-                <p class="hero-text">
-                    This is main page
-                </p>
+                <div class="hero-copy">
+                    <p class="hero-badge">New collection</p>
+                    <h2>Warm, modern shopping experience built in pure JavaScript</h2>
+                    <div class="hero-actions">
+                        <a class="item-button" href="#items">Browse products</a>
+                        <a class="ghost-button" href="contact_page.html">Ask about the offer</a>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="hero-card">
+                        <p class="hero-card-label">Collection highlight</p>
+                        <h3>Simple shop</h3>
+                        <p>The homepage</p>
+                    </div>
+                </div>
+            </section>
+            <section class="features-section">
+                <div class="section-heading">
+                    <p class="section-label">Why this shop</p>
+                    <h2>Introduction to items</h2>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <p class="feature-index">01</p>
+                        <h3>Clear visual hierarchy</h3>
+                        <p>The page now starts with a strong introduction instead of jumping straight into products.</p>
+                    </article>
+                    <article class="feature-card">
+                        <p class="feature-index">02</p>
+                        <h3>Friendlier product cards</h3>
+                        <p>Products have more spacing, softer surfaces and clearer calls to action.</p>
+                    </article>
+                    <article class="feature-card">
+                        <p class="feature-index">03</p>
+                        <h3>Better section rhythm</h3>
+                        <p>Hero, advantages and product list are separated so the layout breathes more naturally.</p>
+                    </article>
+                </div>
             </section>
             <section class="products-section">
                 <div class="section-heading">
-                    <p class="section-label">Ofert</p>
-                    <h2>Products</h2>
+                    <p class="section-label">Offer</p>
+                    <h2>Featured products</h2>
                 </div>
                 <div id="items" class="items-grid"></div>
             </section>
         </section>
     </main>
+    <footer class="site-footer">
+        <p>ShopWebApp. Clean frontend practice with a warmer ecommerce look.</p>
+    </footer>
     <script src="products.js"></script>
     <script src="app.js"></script>
 </body>

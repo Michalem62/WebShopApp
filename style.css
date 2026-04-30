@@ -22,6 +22,11 @@ body {
     border-bottom: 4px solid #f1b24a;
 }
 
+.brand-block {
+    display: grid;
+    gap: 4px;
+}
+
 .site-header h1 {
     margin: 0;
     font-size: clamp(2rem, 4vw, 3.2rem);
@@ -40,7 +45,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
+    min-height: 46px;
     padding: 0 18px;
     border-radius: 999px;
     text-decoration: none;
@@ -86,6 +91,8 @@ body {
 }
 
 .hero {
+    display: grid;
+    gap: 24px;
     padding: 28px;
     border: 2px solid rgba(11, 60, 73, 0.15);
     border-radius: 24px;
@@ -93,6 +100,11 @@ body {
         linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 247, 214, 0.95)),
         #ffffff;
     box-shadow: 0 18px 40px rgba(11, 60, 73, 0.08);
+}
+
+.hero-copy {
+    display: grid;
+    gap: 12px;
 }
 
 .hero-small {
@@ -117,17 +129,105 @@ body {
 
 .hero-text {
     max-width: 700px;
-    margin: 16px 0 0;
+    margin: 0;
     line-height: 1.6;
     color: #3b4547;
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.ghost-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(11, 60, 73, 0.2);
+    text-decoration: none;
+    font-weight: 700;
+    color: #0b3c49;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-panel {
+    display: grid;
+    gap: 16px;
+}
+
+.hero-card {
+    padding: 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #154c58 0%, #0b3c49 100%);
+    color: #ffffff;
+    box-shadow: 0 16px 32px rgba(11, 60, 73, 0.22);
+}
+
+.hero-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+}
+
+.hero-card p {
+    margin: 0;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.hero-card-label {
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #f6d58d;
+}
+
+.features-section,
 .products-section {
     margin-top: 28px;
 }
 
 .section-heading {
     margin-bottom: 18px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.feature-card {
+    padding: 22px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    box-shadow: 0 12px 28px rgba(17, 17, 17, 0.06);
+}
+
+.feature-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    margin: 0;
+    line-height: 1.6;
+    color: #4b5759;
+}
+
+.feature-index {
+    margin: 0 0 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #c07a2b;
 }
 
 .items-grid {
@@ -159,6 +259,19 @@ body {
 
 .single-item h3 {
     font-size: 1.3rem;
+}
+
+.single-item::before {
+    content: "Featured";
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: #fdf0cf;
+    color: #8f5b16;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .item-meta {
@@ -218,6 +331,15 @@ body {
     filter: brightness(1.05);
 }
 
+.site-footer {
+    padding: 22px 24px 32px;
+    color: #5b6466;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
 .product-detail {
     display: grid;
     gap: 28px;
@@ -275,17 +397,28 @@ body {
 @media (min-width: 768px) {
     .layout {
         flex-direction: row;
+        align-items: flex-start;
     }
 
     .sidebar {
-        width: 25%;
-        min-height: 100vh;
+        width: 15%;
+        height: calc(100vh - 120px);
+        min-height: auto;
         border-right: 2px solid rgba(17, 17, 17, 0.12);
-        border-bottom: none;
+        box-shadow: 10px 0 24px rgba(17, 17, 17, 0.05);
     }
 
     .content {
-        width: 75%;
+        width: 85%;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr);
+        align-items: stretch;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .items-grid {
