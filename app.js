@@ -9,6 +9,7 @@ function createItemElement(item) {
     const description = document.createElement("p");
     const actions = document.createElement("div");
     const button = document.createElement("a");
+    const linkText = document.createElement("span");
 
     card.classList.add("single-item");
     meta.classList.add("item-meta");
@@ -21,7 +22,7 @@ function createItemElement(item) {
     category.textContent = item.category;
     price.textContent = `${item.price} zl`;
     description.textContent = item.description;
-    button.textContent = "Show details";
+    linkText.textContent = "Show details";
     button.href = `product_page.html?id=${item.id}`;
 
     card.appendChild(title);
@@ -38,6 +39,7 @@ function createItemElement(item) {
     meta.appendChild(price);
     card.appendChild(meta);
     card.appendChild(description);
+    button.appendChild(linkText);
     actions.appendChild(button);
     card.appendChild(actions);
 
@@ -54,4 +56,3 @@ function renderItems(items) {
 }
 
 renderItems(shopItems);
-
